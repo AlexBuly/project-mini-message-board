@@ -24,6 +24,12 @@ app.get('/', (req, res) => {
     })
 });
 
+app.get('/new', (req, res) => {
+    res.render('routes/newMessage' , {
+        title: 'New Message'
+    });
+})
+
 app.listen(PORT, () => {
     console.log(`App listening at ${PORT}`);
 });
