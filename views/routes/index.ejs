@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <%- include('../partials/header') %>
     <h1>Messages</h1>
     <ul>
+        <hr />
         <% for (const message of messages) { %>
                 <li>
-                    <p><%= message.text %></p>
                     <p><%= message.user %></p>
+                    <p><%= message.text %></p>
                     <p><%= message.added %></p>
+                    <a href="/">Open</a>
                 </li>
                 <hr />
         <% } %>
     </ul>
+    <a href="/new">New Message</a>
 </body>
 </html>
