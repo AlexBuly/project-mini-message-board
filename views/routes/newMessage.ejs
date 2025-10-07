@@ -8,15 +8,19 @@
 </head>
 <body>
      <%- include('../partials/header') %>
-     <h1>New Message</h1>
-    <form method="POST" action="/new">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <label for="text">Text:</label>
-        <input type="text" id="text" name="text" required>
-
-        <input type="submit" value="Submit">
-    </form>
+    <div class="container">
+         <h1>New Message</h1>
+        <form method="POST" action="/new">
+            <div class="message-name">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="message-text">
+                <label for="text">Text:</label>
+                <input type="text" id="text" name="text" required>
+            </div>
+            <input class="submitBtn" type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
