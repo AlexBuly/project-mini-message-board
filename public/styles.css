@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(219, 219, 219);
+}
+
+h1 {
+    margin: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.new-message, .open {
+    background-color: rgb(42, 42, 218);
+    color: white;
+    padding: 0.3em;
+    border-radius: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.new-message:hover, .open:hover {
+    background-color: rgb(18, 18, 119);
+}
+
+.new-message:active, .open:active {
+    background-color: rgb(9, 9, 73)
+}
+
+.username {
+    background-color: rgb(42, 42, 218);
+    color: white;
+    border-radius: 1em;
+}
+
+.username h3 {
+    margin: 0;
+}
+
+.chat-message {
+    background-color: lightblue;
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+.container {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(219, 219, 219);
+    text-align: center;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-self: center;
+}
+
+.home-link {
+    margin-left: 1em;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.home-link:hover {
+    color: rgb(185, 185, 185);
+}
+
+.home-link:active {
+    color: rgb(146, 146, 146)
+}
+
+.navbar {
+    background-color: black;
+    text-align: center;
+    font-size: larger;
+}
+
+form {
+    background-color: lightblue;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    justify-self: center;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.submitBtn {
+    align-self: center;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(42, 42, 218);
+    color: white;
+    padding: 0.3em;
+    border-radius: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+    background-color: rgb(18, 18, 119);
+}
