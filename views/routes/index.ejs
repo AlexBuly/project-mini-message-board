@@ -7,20 +7,24 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <%- include('../partials/header') %>
-    <h1>Messages</h1>
-    <ul>
-        <hr />
-        <% for (const message of messages) { %>
-                <li>
-                    <p><%= message.user %></p>
+     <%- include('../partials/header') %>
+    <div class="container">
+        <h1>Messages</h1>
+
+        <div class="messages">
+            <% messages.forEach((message, index) => { %>
+                <div class="chat-message">
+                    <div class="username">
+                        <h3><%= message.user %></h3>
+                    </div>
                     <p><%= message.text %></p>
-                    <p><%= message.added %></p>
-                    <a href="/">Open</a>
-                </li>
-                <hr />
-        <% } %>
-    </ul>
-    <a href="/new">New Message</a>
+                    <p class="timestamp"><%= message.added %></p>
+                    <a href="/messages/<%= index %>" class="open">Open</a>
+                </div>
+             <% }) %>
+        </div>
+        <br>
+        <a class="new-message" href="/new">New Message</a>
+    </div>
 </body>
 </html>

@@ -44,7 +44,18 @@ app.post('/new', (req, res) => {
     });
 
      res.redirect('/');
-})
+});
+
+app.get('/messages/:id', (req, res) => {
+     const id = parseInt(req.params.id);
+     const message = messages[id];
+
+      if (!message) {
+        return res.status(404).send("Message not found");
+    }
+
+    res.render("routes/message", { title: "Message Details", message });
+});
 
 app.listen(PORT, () => {
     console.log(`App listening at ${PORT}`);
