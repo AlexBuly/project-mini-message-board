@@ -1,1 +1,2 @@
 # project-mini-message-board
+In this project, I created a basic message board application. The application contains 3 routes: a route to get all messages, a route to post a new message, and a route to get an individual message. 
